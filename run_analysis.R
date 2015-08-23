@@ -13,6 +13,7 @@ list.of.activities <- activity.type[,2]
 X.train <- read.table("./UCI HAR Dataset/train/X_train.txt")
 colnames(X.train) <- list.of.features
 
+# Filter out the columns with mean and std deviation
 meas.names <- colnames(X.train)
 req.meas.names <- meas.names[grep("mean\\(\\)|std\\(\\)", meas.names)]
 
