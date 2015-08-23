@@ -11,6 +11,7 @@ activity.type <- read.table("./UCI HAR Dataset/activity_labels.txt",
 list.of.activities <- activity.type[,2]
 
 X.train <- read.table("./UCI HAR Dataset/train/X_train.txt")
+#appropriate labels added to vars
 colnames(X.train) <- list.of.features
 
 # Filter out the columns with mean and std deviation
